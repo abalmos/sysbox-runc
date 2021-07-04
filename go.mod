@@ -20,6 +20,7 @@ require (
 	github.com/nestybox/sysbox-libs/dockerUtils v0.0.0-00010101000000-000000000000
 	github.com/nestybox/sysbox-libs/libseccomp-golang v0.0.0-00010101000000-000000000000
 	github.com/nestybox/sysbox-libs/utils v0.0.0-00010101000000-000000000000
+	github.com/nestybox/sysbox-libs/formatter v0.0.0-00010101000000-000000000000
 	github.com/opencontainers/runc v0.0.0-00010101000000-000000000000
 	github.com/opencontainers/runtime-spec v1.0.3-0.20200929063507-e6143ca7d51d
 	github.com/opencontainers/selinux v1.8.0
@@ -36,6 +37,8 @@ require (
 replace github.com/nestybox/sysbox-ipc => ../sysbox-ipc
 
 replace github.com/nestybox/sysbox-libs/libseccomp-golang => ../sysbox-libs/libseccomp-golang
+
+replace github.com/nestybox/sysbox-libs/formatter => ../sysbox-libs/formatter
 
 replace github.com/nestybox/sysbox-libs/capability => ../sysbox-libs/capability
 
