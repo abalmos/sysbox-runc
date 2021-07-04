@@ -66,8 +66,8 @@ GO_BUILD := $(GO) build $(GO_BUILDMODE) $(EXTRA_FLAGS) -tags "$(BUILDTAGS)" \
 	-ldflags $(LDFLAGS) $(EXTRA_LDFLAGS)
 GO_BUILD_STATIC := CGO_ENABLED=1 $(GO) build $(EXTRA_FLAGS) -tags "$(BUILDTAGS) netgo osusergo" \
 	-ldflags "-w -extldflags -static" -ldflags $(LDFLAGS) $(EXTRA_LDFLAGS)
-GO_BUILD_DEBUG := $(GO) build --buildmode=exe $(EXTRA_FLAGS) -tags "$(BUILDTAGS)" \
-	-ldflags $(LDFLAGS) $(EXTRA_LDFLAGS) -gcflags="all=-N -l"
+GO_BUILD_DEBUG := $(GO) build $(GO_BUILDMODE) $(EXTRA_FLAGS) -tags "$(BUILDTAGS)" \
+	-gcflags="all=-N -l" -ldflags $(LDFLAGS) $(EXTRA_LDFLAGS)
 
 RUN_TEST_CONT := $(CONTAINER_ENGINE) run ${DOCKER_RUN_PROXY} \
 		-t --privileged --rm \
